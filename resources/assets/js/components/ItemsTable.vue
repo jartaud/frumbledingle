@@ -203,7 +203,7 @@ export default {
                     location_id: null,
                 };
           } catch({response}) {
-              if (response.status == 422) this.errors = response.data
+              if (response.status == 422) this.errors = response.data.errors
               else if (response.data && response.data.error) alert(response.data.error)
               this.saving = false
               return console.error('ItemsTable.createItems -> ', response);

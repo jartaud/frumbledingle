@@ -90,7 +90,7 @@ export default {
                 this.creating = false
                 return this.newLocationName='';
           } catch({response}) {
-              if (response.status == 422) this.errors = response.data
+              if (response.status == 422) this.errors = response.data.errors
               else if (response.data && response.data.error) alert(response.data.error)
               this.creating = false
               return console.error('LocationsTable.createLocation -> ', response);
