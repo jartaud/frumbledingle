@@ -12,30 +12,36 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
+        // Parents
         Category::insert([
-            ['name' => 'Widgets', 'created_at' => 'NOW()', 'updated_at' => 'NOW()'],
             ['name' => 'Cars', 'created_at' => 'NOW()', 'updated_at' => 'NOW()'],
             ['name' => 'Purses', 'created_at' => 'NOW()', 'updated_at' => 'NOW()'],
         ]);
 
         Category::insert([
             [
+                'name' => 'Widgets',
+                'created_at' => 'NOW()',
+                'updated_at' => 'NOW()',
+                'parent_id' => null,
+            ],
+            [
                 'name' => 'Chevrolet',
                 'created_at' => 'NOW()',
                 'updated_at' => 'NOW()',
-                'parent_id' => 2,
+                'parent_id' => 1,
             ],
             [
                 'name' => 'Nissan',
                 'created_at' => 'NOW()',
                 'updated_at' => 'NOW()',
-                'parent_id' => 2,
+                'parent_id' => 1,
             ],
             [
                 'name' => 'Louis Vuitton',
                 'created_at' => 'NOW()',
                 'updated_at' => 'NOW()',
-                'parent_id' => 3,
+                'parent_id' => 2,
             ],
         ]);
     }

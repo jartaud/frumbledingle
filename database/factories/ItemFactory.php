@@ -18,6 +18,6 @@ $factory->define(\App\Models\Item::class, function (Faker\Generator $faker) {
         'price' => 200,
         'location_id' => 1,
         'category_id' => 1,
-        'parent_category_id' => 1,
+        'parent_category_id' => null,
     ];
 });

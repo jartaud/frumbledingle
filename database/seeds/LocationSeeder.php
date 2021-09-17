@@ -11,6 +11,7 @@ class LocationSeeder extends Seeder
      */
     public function run()
     {
-        factory(\App\Models\Location::class, 10)->create();
+        factory(\App\Models\Location::class)->create(['name' => 'Frumbledingle Corp']);
+        factory(\App\Models\Location::class)->create(['name' => 'Plupbuckle, Inc.']);
     }
 }
